@@ -1,0 +1,35 @@
+<div ng-show='signInPage'>
+    <section class="loginSection">
+        <div class="loginBlock">
+            <input type="text" ng-model="login" placeholder="login">
+            <br>
+            <br>
+            <input type="text" ng-model="password" placeholder="password">
+            <br>
+            <div ng-model="userStatus" class="userStatusBlock">{{userStatus}}</div>
+            <input type="button" ng-click="SignIn()" value="Sign In" class="signInButtom">
+        </div>
+    </section>
+    <section class="chat">
+            <div class="section">
+                <div class="nameDate" id ="NameDate">
+                    <p ng-model="firstName">{{firstName}}</p>
+                </div>
+            </div>
+            <div class="section">
+                <center>
+                    <input type="text" ng-model="text" class="text">
+                </center>
+                <input type="button" value="Send" ng-click="Send()" ng-show="canSend" class="button butSend">
+            </div>
+            <div class="blogArea">
+    
+                <div ng-repeat="user in arrchat | orderBy:'$index':true" class="blogArea ">
+                    {{user.name}} | {{user.data | date:'HH:mm:ss'}}
+                    <br>
+                    <strong>{{user.text}}</strong>
+                </div>
+            </div>
+            
+        </section>
+</div>

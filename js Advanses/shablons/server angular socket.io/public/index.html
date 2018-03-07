@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <title>Document</title>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/my.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-controller='MyCtrl'>
+
+    <center>
+        <div class="chat" ng-model='chat'>
+
+            <h1 ng-repeat='a in arr track by $index'>
+                {{a}}
+            </h1>
+
+        </div>
+        <input type="button" ng-click='Start()' value="Start">
+        <input type="text" ng-model='EnterText'>
+    </center>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+1)Створюємо папку server
+
+2)Копіюємо адресу даної папки(включаючи назву папки)
+
+3)Відкриваємо командну строку cmd
+
+4)В командній строці переходимо на диск, на якому наш сервер(змінити диск на диск Е:/ - "Е:" та
+  пишемо "cd пробіл адреса_папки"(включаючи слово "сервер")
+  (має вийти типу - "cd C:\Users\User\Desktop\JS Advance Lessons\7\server"
+
+5)Після здійсненого переходу на адресу папки, в командній строці пишемо "npm init" - в папці server створиться файл package.json
+
+6)В командній строці в поле name ввести назву сайту наприклад "server01" і далі просто клацаєм ентер багато раз поки не закінчиться реєстрація
+
+7)Все! Файл згенеровано і він зявится в папці. 
+
+8)Далі пишемо в командній строці "npm install body-parser express --save"
+
+9)В файлі package.json добавиться dependencies
+
+10)Відкриваємо папку server за допомогою brackets
+
+11)В нас видно лише один файл package.json
+
+12)Створюємо ще один файл - server.js
+
+13)В цей файл вставляємо текст :
+
+//Початок
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const port = 8000;
+
+app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({'extended':'true'}));
+
+//Усі адреси контролюються клієнтським ангуляром
+app.get('*', function (req, res) {
+    res.sendFile(__dirname + '/public/index.html');
+});
+
+
+app.listen(port, function (err) {
+    if (err) throw err;
+    console.log('Server start on port 8000!');
+});
+
+//Кінець
+
+14)Закриваємо server.js І створюємо поряд папку "public"
+
+15)В папку public вставляємо наш сайт 
+
+16)Головна умова щоб в папці public був index.html - бо це буде стартова сторінка
+
+17)В командній строці(надіюсь Ви її ще не закрили, бо якщо закрили то повторіть дії 3 та 4 пункту)
+напишіть  "node server" - повинен зявитись напис - 'Server start on port 8000!'
+18)Відкрийте браузер і напишіть в ньому адресу - "localhost:8000" 
+
+Все це Ваш сайт на сервері експресу через ноду. Вітаю!

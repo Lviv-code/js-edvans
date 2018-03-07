@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <base href="/">
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <script src="js/my.js"></script>
+</head>
+<body ng-controller="MyCtrl">
+   <center>
+       <input type="text" ng-model="login">
+       <br><br>
+        <input type="text" ng-model="password">
+       <br><br>
+       <input type="button" value="Sign login" ng-click="SignLogin()">
+       <input type="button" value="Sign Password" ng-click="SignPassword()">
+   </center>
+</body>
+</html>

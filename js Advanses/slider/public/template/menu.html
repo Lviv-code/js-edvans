@@ -1,0 +1,38 @@
+<div>
+    <div class="topMenu">
+        <input type="button" ng-click='home()' value="Slider">
+        <input type="button" ng-click='signIn()' value="SignIn">
+        <input type="button" ng-click='signup()' value="SignUp">
+    </div>
+    <center ng-show='homePage'>
+
+        <ul>
+            <li ng-show="slider1Page" class="sliderImage sliderImage1">
+                <div class="name">
+                    <h1>1</h1>
+                </div>
+            </li>
+            <li ng-show="slider2Page" class="sliderImage sliderImage2">
+                <div class="name">
+                    <h1>2</h1>
+                </div>
+            </li>
+            <li ng-show="slider3Page" class="sliderImage sliderImage3">
+                <div class="name">
+                    <h1>3</h1>
+                </div>
+            </li>
+            <li ng-show="slider4Page" class="sliderImage sliderImage4">
+                <div class="name">
+                    <h1>4</h1>
+                </div>
+            </li>
+        </ul>
+        <div id="Slider">
+            <div ng-click='slider1()' class="controlSlider"></div>
+            <div ng-click='slider2()' class="controlSlider"></div>
+            <div ng-click='slider3()' class="controlSlider"></div>
+            <div ng-click='slider4()' class="controlSlider"></div>
+        </div>
+    </center>
+</div>

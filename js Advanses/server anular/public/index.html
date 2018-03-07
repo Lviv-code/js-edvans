@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <base href="/">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/my.js"></script>
+</head>
+
+<body ng-controller='MyCtrl'>
+
+    <section class="loginSection">
+        <div class="overlay" id="Overlay"></div>
+
+        <div class="loginBlock">
+            <input type="text" ng-model="login" placeholder="login">
+            <br>
+            <br>
+            <input type="text" ng-model="password" placeholder="password">
+            <br>
+            <div ng-model="userStatus" class="userStatusBlock">{{userStatus}}</div>
+            <input type="button" ng-click="SignIn()" value="Sign In" class="signInButtom">
+            <input type="button" id="SignUp" value="Sign Up" class="signUpButtom">
+        </div>
+
+        <div class="modal" id="RegistrBlock">
+            <h1>Registration</h1>
+            <input type="text" ng-model="newLogin">
+            <br>
+            <br>
+            <input type="text" ng-model="newPassword">
+            <br>
+            <br>
+            <input type="button" ng-click="createNewUser()" value="Create new User" class="regButtom">
+            <input type="button" id="CloseRegBlock" value="Close" class="closeButtom">
+        </div>
+    </section>
+
+    <section class="chat">
+        <div class="section">
+            <div class="nameDate" id ="NameDate">
+                <p ng-model="firstName">{{firstName}}</p>
+            </div>
+        </div>
+        <div class="section">
+            <center>
+                <input type="text" ng-model="text" class="text">
+            </center>
+            <input type="button" value="Send" ng-click="Send()" class="button butSend">
+        </div>
+        <div class="blogArea">
+
+            <div ng-repeat="user in arrchat | orderBy:'$index':true" class="blogArea ">
+                {{user.name}} | {{user.data | date:'HH:mm:ss'}}
+                <br>
+                <strong>{{user.text}}</strong>
+            </div>
+        </div>
+        
+    </section>
+</body>
+
+</html>
