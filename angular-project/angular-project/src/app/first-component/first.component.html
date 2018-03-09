@@ -1,1 +1,13 @@
-It is my first component!
+<div class="main">
+    <p>{{name}}</p>
+    <p>{{age}}</p>
+    <p>{{country}}</p>
+    <p>{{city}}</p>    
+    </div> 
+    <input class="input" type="text" (input)=editName($event)>
+<input type="text" [(ngModel)] = "value">
+<p>{{value}}</p>
+<button class="btn" (click) = "onClockButton()">Click</button>
+<div *ngIf="isShow">
+    Text
+</div>

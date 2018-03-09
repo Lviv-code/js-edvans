@@ -1,0 +1,15 @@
+.main{
+    color: white;
+    font-size: 20px;
+    margin: 50px;
+    background: gray;
+    padding: 10px;
+    border:2px solid #000;
+}
+.main p {
+    margin: 0px;
+}
+.input{
+    text-align: center;
+    margin-left: 50px;
+}
