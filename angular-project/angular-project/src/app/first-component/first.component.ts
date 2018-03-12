@@ -7,16 +7,28 @@ import { Component } from "@angular/core";
 })
 export class FirstComponet {
     name: string = "Volodymyr";
+    lastName: string ="Palchinskiy";
     age:  number = 35;
-    country: string = "Ukraine";
-    city: string = "Lviv";
-    
-    editName(event) {
-        console.log(event.target.value)
+    job: string = "Meneger";
+    company: string = "company";
+
+    isShowForm: boolean = false;
+    showForm(){
+        this.isShowForm = true;
     };
-    value: string = "Hellow";
-    isShow: boolean = true;
-    onClockButton(){
-this.isShow = !this.isShow;
+    hideForm(){
+        this.isShowForm = false; 
     }
+
+    isShowAddSkill: boolean = false;
+    showAddSkill(){
+        this.isShowAddSkill = true;
+    };
+    skills: any = ['HTML' ,'CSS' , 'JS', 'C#'];
+    newSkill: string = "";
+    addElement(){
+        this.skills.push(this.newSkill);
+    }
+      
+
 }

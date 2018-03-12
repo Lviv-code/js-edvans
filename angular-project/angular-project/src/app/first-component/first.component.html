@@ -1,13 +1,51 @@
-<div class="main">
+<div class="container">
+  <div class="colum colum-1">
     <p>{{name}}</p>
+    <p>{{lastName}}</p>
     <p>{{age}}</p>
-    <p>{{country}}</p>
-    <p>{{city}}</p>    
-    </div> 
-    <input class="input" type="text" (input)=editName($event)>
-<input type="text" [(ngModel)] = "value">
-<p>{{value}}</p>
-<button class="btn" (click) = "onClockButton()">Click</button>
-<div *ngIf="isShow">
-    Text
+    <p>{{job}}</p>
+    <p>{{company}}</p>
+    <button class="btn btn-add" (click)="showForm()">Edit</button>
+  </div>
+  <div class="colum colum-2">
+    <div *ngIf="isShowForm">
+      <p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="name">
+        
+      </p>
+      <p>
+        <label for="lastName">Last name:</label>
+        <input type="text" id="lastName" [(ngModel)]="lastName">
+      </p>
+      <p>
+        <label for="age">Age:</label>
+        <input type="number" id="age" [(ngModel)]="age">
+      </p>
+      <p>
+        <label for="job">Jobe:</label>
+        <input type="text" id="job" [(ngModel)]="job">
+      </p>
+      <p>
+        <label for="company">Company:</label>
+        <input type="text" id="company" [(ngModel)]="company">
+      </p>
+      <button class="btn btn-close" (click)="hideForm()">Close</button>
+    </div>
+
+  </div>
+
+  <div class="colum">
+        
+    <div *ngFor="let skill of skills">
+            <p>{{skill}}</p>
+    </div>    
+    <button  class="btn btn-add" (click)="showAddSkill()">Add new skill</button>
+  </div>
+  <div class="colum colume-4">
+    <div *ngIf="isShowAddSkill">      
+      <input type="text" [(ngModel)]="newSkill"><br>
+      <button (click)="addElement()" class="btn btn-close">Add</button>
+    </div>
+  </div>  
 </div>
