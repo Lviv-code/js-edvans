@@ -8,6 +8,10 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { TourComponent } from './tour/tour.component';
+import { TourDetailsComponent } from './tour/tour-details/tour-details.component';
+import { TourItemComponent } from './tour/tour-item/tour-item.component';
+import { TourListComponent } from './tour/tour-list/tour-list.component';
 
 
 @NgModule({
@@ -18,6 +22,10 @@ import { RegistrationComponent } from './registration/registration.component';
     LoginComponent,
     ProfileComponent,
     RegistrationComponent,
+    TourComponent,
+    TourDetailsComponent,
+    TourItemComponent,
+    TourListComponent
   ],
   imports: [
     BrowserModule

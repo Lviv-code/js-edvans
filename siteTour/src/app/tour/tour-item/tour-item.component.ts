@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Tour } from '../tour.model';
 
 @Component({
   selector: 'app-tour-item',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TourItemComponent implements OnInit {
 
+  @Input()
+  tour: Tour;
   constructor() { }
 
   ngOnInit() {
