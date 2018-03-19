@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { GameControllerComponent } from './game-controller/game-controller.component';
 import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
+import { OrangColorDirective } from './orang-color.directive';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { EvenComponent } from './even/even.component';
     AppComponent,
     GameControllerComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    OrangColorDirective,
   ],
   imports: [
     BrowserModule

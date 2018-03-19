@@ -1,4 +1,0 @@
-<div *ngFor = "let tour of tours">
-  <app-tour-item [tour] = "tour" (click) = "openTourDetails(tour)"></app-tour-item>
-</div>
- <app-tour-details *ngIf = "isOpenDetails" [currentTour] = "currentTour"></app-tour-details>

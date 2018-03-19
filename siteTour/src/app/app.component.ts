@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  oddNumber: number[] = [];
+evenNumber: number[] = [];
+
+onIntervalFired(fireNumber: number){
+  if(fireNumber%2 ===0){
+    this.evenNumber.push(fireNumber);
+  } else if( fireNumber%2 !==0){
+    this.oddNumber.push(fireNumber);
+  }
+}
 }
