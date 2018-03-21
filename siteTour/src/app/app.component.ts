@@ -10,9 +10,9 @@ export class AppComponent {
 evenNumber: number[] = [];
 
 onIntervalFired(fireNumber: number){
-  if(fireNumber%2 ===0){
+  if(fireNumber % 2 === 0){
     this.evenNumber.push(fireNumber);
-  } else if( fireNumber%2 !==0){
+  } else {
     this.oddNumber.push(fireNumber);
   }
 }
