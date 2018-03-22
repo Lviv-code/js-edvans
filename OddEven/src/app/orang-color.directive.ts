@@ -11,7 +11,7 @@ export class OrangColorDirective implements OnInit{
     this.renderer.setStyle(this.elementRef.nativeElement, "background", "yellow")
   }
   @HostListener('mouseleave')
-  onmouseleave(){
+  onMouseleave(){
     this.renderer.setStyle(this.elementRef.nativeElement, "background", "red")
   }
 
