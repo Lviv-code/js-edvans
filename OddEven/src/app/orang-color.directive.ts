@@ -9,10 +9,14 @@ export class OrangColorDirective implements OnInit{
   onMouseOver(){
     
     this.renderer.setStyle(this.elementRef.nativeElement, "background", "yellow")
+    this.renderer.setStyle(this.elementRef.nativeElement, "width", "200px")
+    this.renderer.setStyle(this.elementRef.nativeElement, "height", "200px")
   }
   @HostListener('mouseleave')
   onmouseleave(){
     this.renderer.setStyle(this.elementRef.nativeElement, "background", "red")
+    this.renderer.setStyle(this.elementRef.nativeElement, "width", "150px")
+    this.renderer.setStyle(this.elementRef.nativeElement, "height", "150px")
   }
 
   ngOnInit(){
