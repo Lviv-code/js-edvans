@@ -5,7 +5,7 @@ import { DataUsersService } from '../data-users.service';
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css', '../../../node_modules/bootstrap/dist/css/bootstrap.css'],
-  providers: [DataUsersService]
+  providers: []
 })
 export class UserComponent implements OnInit {
   users = [];

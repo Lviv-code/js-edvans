@@ -1,8 +1,8 @@
 <div class="admin">
-  <button type="button" class="btn btn-outline-primary" (click) = "addUserAdmin()">Add user</button> 
-  <input type="text"  class="form-control" [(ngModel)] = "textUserAdd"> <br>
-  <button type="button" class="btn btn-outline-danger" (click) = "deleteUserAdmin()">Delete user</button> 
-  <input type="text" class="form-control" [(ngModel)] = "textUserDelete">
+  <button type="button" class="btn btn-outline-primary" (click) = "addUserAdmin(textUserAdd.value)">Add user</button> 
+  <input type="text"  class="form-control" #textUserAdd> <br>
+  <button type="button" class="btn btn-outline-danger" (click) = "deleteUserAdmin(textUserDelete.value)">Delete user</button> 
+  <input type="text" class="form-control" #textUserDelete>
   <div class="arrey" *ngFor= "let user of users">{{user.name}} </div>
 </div>
 

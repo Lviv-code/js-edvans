@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class DataUsersService {
+  constructor() { }
 
-  array =[];
   arreyUsers = [
     {
       name: 'user1'
@@ -16,17 +16,16 @@ export class DataUsersService {
     }
   ];
 
-addUser(name: string, array: any){
-  this.array.push({name});
+addUser(nameData: string){
+  this.arreyUsers.push({name: nameData});
 };
 
-deleteUser(nameDelete: string){
-  let index = this.arreyUsers.indexOf(name);
-  if(index){
-    this.arreyUsers.slice(index);
-    }
+deleteUser(name: string){
+  let n = null;
+  this.arreyUsers.forEach(function(item, i, arr) {
+    if(item.name === name) n=i;
+  });
+  if(n != null)
+  this.arreyUsers.splice(n, 1);
   };
-
-  constructor() { }
-
 }

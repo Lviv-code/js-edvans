@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
+import { DataUsersService } from './data-users.service';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { UserComponent } from './user/user.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DataUsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
