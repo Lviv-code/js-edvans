@@ -7,13 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  switshAdminUser = true;
 
-  switshAdmin(){
-    this.switshAdminUser=true;
-  }
-  switshUser(){
-    this.switshAdminUser = false;
-  }
 
 }

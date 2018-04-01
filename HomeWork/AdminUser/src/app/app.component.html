@@ -1,13 +1,8 @@
 
 <div class="top">
-  <a href="#" (click)= "switshAdmin()">Admin</a>
-  <a href="#" (click)= "switshUser()">User</a>
+  <a routerLinkActive="active" routerLink = "/admin" >Admin</a>
+  <a routerLinkActive="active" routerLink = "/user">User</a>
 </div>
-<app-admin *ngIf = "switshAdminUser">
-
-</app-admin>
-<app-user *ngIf = "!switshAdminUser">
-
-</app-user>
+<router-outlet></router-outlet>
 
 
