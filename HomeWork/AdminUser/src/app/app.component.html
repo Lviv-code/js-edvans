@@ -3,6 +3,11 @@
   <a routerLinkActive="active" routerLink = "/admin" >Admin</a>
   <a routerLinkActive="active" routerLink = "/user">User</a>
 </div>
+<div class="col-xs-12">
+  <a routerLink>Home</a>
+  <a [routerLink]=['User1', 1]>User 1</a>
+  <a [routerLink]=['User1', 2]>User 2</a>
+</div>
 <router-outlet></router-outlet>
 
 
