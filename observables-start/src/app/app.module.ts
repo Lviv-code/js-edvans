@@ -1,22 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import {Routes, RouterModule} from '@angular/router';
+import {HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { UserComponent } from './user/user.component';
-import { AppRoutingModule } from './app-routing.module';
+import { ManageSevice } from '../services/manage.service';
+import { ManagmentComponent } from './managment/managment.component';
+import { EmployersComponent } from './employers/employers.component';
+
+const appRoutes: Routes = [
+{path: 'manage', component: ManagmentComponent},
+{path: 'employers', component: EmployersComponent},
+{path: '', component: EmployersComponent}
+
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    UserComponent
+    ManagmentComponent,
+    EmployersComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes),
+    HttpModule
   ],
-  providers: [],
+  providers: [ManageSevice],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
